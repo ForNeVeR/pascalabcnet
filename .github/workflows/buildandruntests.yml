@@ -30,6 +30,10 @@ jobs:
         PABCNET_RUN_TESTS:  false
         PABCNET_INC_BUILD:  false
         PABCNET_VERBOSE:    false
+        
+    - name: Prepare the installer
+      working-directory: ReleaseGenerators
+      run: PascalABCNETConsoleZIP.bat
 
     - name: Publish artifacts (5/5)...
       uses: actions/upload-artifact@v2
